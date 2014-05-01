@@ -11,7 +11,8 @@ namespace TestAttrIoC.Controllers.Filters
     public class AuthorizeFirmAttribute : Attribute, IDisposable
     {
         public AuthorizeFirmAttribute() 
-        { }
+        {
+        }
 
         public void Dispose()
         {

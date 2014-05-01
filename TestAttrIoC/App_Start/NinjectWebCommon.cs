@@ -79,11 +79,11 @@ using Ninject.Modules;
 
             this.BindHttpFilter<AuthorizeFirmFilterAttribute>(System.Web.Http.Filters.FilterScope.Controller)
                 .WhenControllerHas<AuthorizeFirmAttribute>()
-                .InRequestScope()
-                .WithConstructorArgument("repository", (context) =>
-                {
-                    return context.Kernel.Get<IFirmRepository>();
-                });
+                .InRequestScope();
+                //.WithConstructorArgument("repository", (context) =>
+                //{
+                //    return context.Kernel.Get<IFirmRepository>();
+                //});
         }
     }
 }
