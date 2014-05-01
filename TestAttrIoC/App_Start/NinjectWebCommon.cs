@@ -75,7 +75,7 @@ using Ninject.Modules;
         {
             Bind<DbContext>().ToSelf().InRequestScope();
             Bind<IFirmRepository>().To<FirmRepository>().InRequestScope();
-            Bind<AuthorizeFirmFilterAttribute>().ToSelf().InRequestScope();
+            //Bind<AuthorizeFirmFilterAttribute>().ToSelf().InRequestScope();
 
             this.BindHttpFilter<AuthorizeFirmFilterAttribute>(System.Web.Http.Filters.FilterScope.Controller)
                 .WhenControllerHas<AuthorizeFirmAttribute>()
